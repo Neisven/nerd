@@ -1,4 +1,4 @@
-declare module 'secure-database' {
+declare module './src/main' {
     import { EventEmitter } from 'events';
 
     interface DatabaseData {
@@ -23,6 +23,4 @@ declare module 'secure-database' {
         getAllKeys(): string[];
         on<U extends keyof DatabaseEvents>(event: U, listener: DatabaseEvents[U]): this;
     }
-
-    export default SecureDatabase;
 }
